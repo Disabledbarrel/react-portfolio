@@ -16,7 +16,7 @@ export default class NavBar extends Component {
 					<ul className={`menu-nav ${this.props.visibility ? "show" : ""}`}>
 						<li className="nav-item current">
 							<a href="index.html" className="nav-link">
-								Hem!
+								Hem
 							</a>
 						</li>
 						<li className="nav-item">
