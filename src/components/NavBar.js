@@ -1,10 +1,21 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
+	state = {
+		isVisible: false,
+	};
+	changeState = () => {
+		this.setState((prevState) => ({
+			isVisible: !prevState.isVisible,
+		}));
+	};
+	onTrigger = (event) => {
+		this.props.parentCallback(false);
+		event.preventDefault();
+	};
+
 	render() {
-		state = {
-			isVisible: this.props.visibility,
-		};
 		return (
 			<Fragment>
 				<nav className={`menu ${this.props.visibility ? "show" : ""}`}>
@@ -14,25 +25,25 @@ export default class NavBar extends Component {
 						<div className="portrait"></div>
 					</div>
 					<ul className={`menu-nav ${this.props.visibility ? "show" : ""}`}>
-						<li className="nav-item current">
-							<a href="index.html" className="nav-link">
+						<li className="nav-item" onClick={this.onTrigger}>
+							<Link to="/" className="nav-link">
 								Hem
-							</a>
+							</Link>
 						</li>
-						<li className="nav-item">
-							<a href="about.html" className="nav-link">
+						<li className="nav-item" onClick={this.onTrigger}>
+							<Link to="/about" className="nav-link">
 								Om mig
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="work.html" className="nav-link">
+							<Link to="/" className="nav-link">
 								Arbete
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="project.html" className="nav-link">
+							<Link to="/" className="nav-link">
 								Projekt
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>

@@ -15,6 +15,7 @@ export default class Main extends Component {
 						<a
 							href="https://se.linkedin.com/in/elin-larsson-38576456?trk=people-guest_people_search-card"
 							target="_blank"
+							rel="noreferrer noopener"
 							className="icon-link"
 						>
 							<i className="fab fa-linkedin"></i>
@@ -22,6 +23,7 @@ export default class Main extends Component {
 						<a
 							href="https://github.com/Disabledbarrel"
 							target="_blank"
+							rel="noreferrer noopener"
 							className="icon-link"
 						>
 							<i className="fab fa-github"></i>

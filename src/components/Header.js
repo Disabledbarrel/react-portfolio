@@ -10,6 +10,10 @@ export default class Header extends Component {
 			visibility: !prevState.visibility,
 		}));
 	};
+	handleCallback = (childData) => {
+		this.setState({ visibility: childData });
+	};
+
 	render() {
 		return (
 			<Fragment>
@@ -22,7 +26,10 @@ export default class Header extends Component {
 						<div className="btn-line"></div>
 						<div className="btn-line"></div>
 					</div>
-					<NavBar visibility={this.state.visibility} />
+					<NavBar
+						visibility={this.state.visibility}
+						parentCallback={this.handleCallback}
+					/>
 				</header>
 			</Fragment>
 		);

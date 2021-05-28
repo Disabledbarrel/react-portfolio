@@ -8,12 +8,12 @@
 body {
 	height: 100%;
 	font-family: "Montserrat", sans-serif;
-	background: #303841;
+	background: #282f36;
 	color: #eee;
 	line-height: 1.5;
 }
 body#bg-img {
-	/*background: url(../img/background.jpg);*/
+	background: url("./img/background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -43,7 +43,8 @@ h2.sm-heading {
 	padding: 0.2rem 1rem;
 	background: rgba(52, 61, 71, 0.5);
 }
-a {
+a,
+.icon-link {
 	text-decoration: none;
 	color: #eee;
 }
@@ -71,7 +72,7 @@ main .icons a {
 	padding: 0.4rem;
 }
 main .icons a:hover {
-	color: #07a374;
+	color: #4fd8a6;
 	transition: all 0.5s ease-out;
 }
 main#home {
@@ -150,12 +151,12 @@ main#home h1 {
 .menu-branding .portrait {
 	width: 250px;
 	height: 250px;
-	/*background: url(../img/elin.jpg);*/
+	background: url("./img/elin.jpg");
 	border-radius: 50%;
-	border: solid 3px #07a374;
+	border: solid 3px #4fd8a6;
 }
 .menu .nav-item.current > a {
-	color: #07a374;
+	color: #4fd8a6;
 }
 .menu .nav-link {
 	display: inline-block;
@@ -168,10 +169,10 @@ main#home h1 {
 	transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-	color: #07a374;
+	color: #4fd8a6;
 }
 .text-secondary {
-	color: #07a374;
+	color: #4fd8a6;
 }
 main#about h1 {
 	padding-bottom: 20px;
@@ -188,7 +189,7 @@ main#about h1 {
 	grid-area: bioimage;
 	margin: auto;
 	border-radius: 50%;
-	border: solid 3px #07a374;
+	border: solid 3px #4fd8a6;
 }
 .about-info .bio {
 	grid-area: bio;
@@ -196,7 +197,7 @@ main#about h1 {
 }
 .about-info .education-header {
 	grid-area: education-header;
-	color: #07a374;
+	color: #4fd8a6;
 	font-size: 1.5rem;
 	font-family: "Quicksand", cursive;
 }
@@ -215,7 +216,7 @@ main#about h1 {
 #output2 .job {
 	background: #3a4750;
 	padding: 0.5rem;
-	border-bottom: 3px solid #07a374;
+	border-bottom: 3px solid #4fd8a6;
 }
 #output .job h4,
 #output2 .job h4 {
@@ -223,7 +224,7 @@ main#about h1 {
 }
 #output .job h5,
 #output2 .job h5 {
-	color: #07a374;
+	color: #4fd8a6;
 }
 #projects {
 	display: grid;
@@ -239,7 +240,7 @@ main#about h1 {
 }
 #projects .item h3 {
 	font-family: "Quicksand", cursive;
-	color: #07a374;
+	color: #4fd8a6;
 	margin-bottom: 10px;
 }
 #projects .item p {
@@ -252,7 +253,7 @@ main#about h1 {
 }
 #projects img:hover {
 	opacity: 0.5;
-	border-color: #07a374;
+	border-color: #4fd8a6;
 	transition: all 0.5s ease-out;
 }
 #projects .project_link:hover {
