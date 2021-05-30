@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 export default class Main extends Component {
 	render() {
 		return (
-			<Fragment>
+			<div className="bg-img">
 				<main id="home">
 					<h1 className="lg-heading">
 						Elin <span className="text-secondary">Larsson</span>
@@ -30,7 +30,7 @@ export default class Main extends Component {
 						</a>
 					</div>
 				</main>
-			</Fragment>
+			</div>
 		);
 	}
 }
