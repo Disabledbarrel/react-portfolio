@@ -35,14 +35,14 @@ export default class NavBar extends Component {
 								Om mig
 							</Link>
 						</li>
-						<li className="nav-item">
-							<Link to="/" className="nav-link">
-								Arbete
+						<li className="nav-item" onClick={this.onTrigger}>
+							<Link to="/projects" className="nav-link">
+								Projekt
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item" onClick={this.onTrigger}>
 							<Link to="/" className="nav-link">
-								Projekt
+								Arbete
 							</Link>
 						</li>
 					</ul>

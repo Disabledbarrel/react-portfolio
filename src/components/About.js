@@ -28,13 +28,12 @@ export default class About extends Component {
 		return (
 			<Fragment>
 				<main id="about">
-					<h1 className="lg-heading">
-						Om <span className="text-secondary">mig</span>
-					</h1>
 					<div className="about-info">
 						<img src={Elin} alt="Elin Larsson" className="bio-image" />
 						<div className="bio">
-							<h2 className="text-secondary">Biografi</h2>
+							<h1 className="lg-heading">
+								Om <span className="text-secondary">mig</span>
+							</h1>
 							<p className="bio-text">
 								Elin Larsson, junior webbutvecklare med fokus på frontend.
 								Brinner mest för utveckling i React, men har erfarenhet från
