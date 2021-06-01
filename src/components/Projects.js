@@ -7,7 +7,7 @@ export default class Projects extends Component {
 
 	async componentDidMount() {
 		const apiUrl =
-			"http://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/project/read.php";
+			"https://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/project/read.php";
 		const projectRes = await fetch(apiUrl).then((res) => res.json());
 		const projects = projectRes.data;
 		this.setState({

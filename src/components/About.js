@@ -8,7 +8,7 @@ export default class About extends Component {
 
 	async componentDidMount() {
 		const apiUrl =
-			"http://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/education/read.php";
+			"https://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/education/read.php";
 		const eduRes = await fetch(apiUrl).then((res) => res.json());
 		const educations = eduRes.data;
 		this.setState({

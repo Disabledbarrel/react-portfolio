@@ -6,7 +6,7 @@ export default class Work extends Component {
 	};
 	async componentDidMount() {
 		const apiUrl =
-			"http://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/work/read.php";
+			"https://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/work/read.php";
 		const jobRes = await fetch(apiUrl).then((res) => res.json());
 		const jobs = jobRes.data;
 		this.setState({ jobs });
