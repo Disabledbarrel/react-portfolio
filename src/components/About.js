@@ -3,64 +3,54 @@ import Elin from "../img/elin.jpg";
 
 export default class About extends Component {
 	state = {
-		isLoading: true,
 		educations: [],
 	};
-	getEducation() {
+
+	async componentDidMount() {
 		const apiUrl =
 			"http://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/education/read.php";
-		fetch(apiUrl)
-			.then((response) => response.json())
-			.then((data) =>
-				this.setState({
-					educations: data,
-					isLoading: false,
-				})
-			);
-	}
-	componentDidMount() {
-		this.getEducation();
+		const eduRes = await fetch(apiUrl).then((res) => res.json());
+		const educations = eduRes.data;
+		this.setState({
+			educations,
+		});
 	}
 
 	render() {
-		const { isLoading, educations } = this.state;
-		const education = educations.data;
+		const { educations } = this.state;
 		return (
 			<Fragment>
 				<main id="about">
+					<h1 className="lg-heading">
+						Om <span className="text-secondary">mig</span>
+					</h1>
 					<div className="about-info">
 						<img src={Elin} alt="Elin Larsson" className="bio-image" />
-						<div className="bio">
-							<h1 className="lg-heading">
-								Om <span className="text-secondary">mig</span>
-							</h1>
-							<p className="bio-text">
-								Elin Larsson, junior webbutvecklare med fokus på frontend.
-								Brinner mest för utveckling i React, men har erfarenhet från
-								flera språk & tekniker.
-								<br />
-								Är även legitimerad apotekare. På fritiden tycker jag om att gå
-								på bio, löpträna, spela tv-spel och simma.
+						<div className="bio bio-text">
+							<p>
+								Mitt namn är Elin Larsson och jag är junior webbutvecklare med
+								fokus på frontend. Jag brinner mest för utveckling i React, men
+								har erfarenhet från flera språk och tekniker.
+							</p>
+							<p>
+								Jag är även legitimerad apotekare. På fritiden tycker jag om att
+								gå på bio, löpträna, spela tv-spel och simma.
 							</p>
 						</div>
-						<h3 className="education-header">Utbildning</h3>
+						<h3 className="text-secondary">Utbildning</h3>
 					</div>
 					<div id="output">
-						{!isLoading ? (
-							education.map((singleEd) => {
-								const { id, course, school, startdate, stopdate } = singleEd;
-								return (
-									<div className="job" key={id}>
-										<h4>{course}</h4>
-										<h5>Lärosäte: {school}</h5>
-										<p>Start: {startdate}</p>
-										<p>Slut: {stopdate}</p>
-									</div>
-								);
-							})
-						) : (
-							<h3>Loading...</h3>
-						)}
+						{educations.map((singleEd) => {
+							const { id, course, school, startdate, stopdate } = singleEd;
+							return (
+								<div className="job" key={id}>
+									<h4>{course}</h4>
+									<h5>Lärosäte: {school}</h5>
+									<p>Start: {startdate}</p>
+									<p>Slut: {stopdate}</p>
+								</div>
+							);
+						})}
 					</div>
 				</main>
 			</Fragment>

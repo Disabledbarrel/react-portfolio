@@ -198,15 +198,13 @@ main#about h1 {
 	grid-area: bio;
 	font-size: 1.5rem;
 }
-.about-info .education-header {
-	grid-area: education-header;
-	color: #4fd8a6;
-	font-size: 1.5rem;
-	font-family: "Quicksand", cursive;
-}
 .about-info .bio-text {
 	background: #3a4750;
 	padding: 0.5rem;
+	font-size: 1.4rem;
+	height: auto;
+	width: 90%;
+	margin: auto auto;
 }
 #output,
 #output2 {
@@ -394,6 +392,9 @@ main#about h1 {
 	#projects,
 	#output2 {
 		display: block;
+	}
+	.item {
+		margin: 5px;
 	}
 	main#home h1 {
 		margin-top: 10vh;
